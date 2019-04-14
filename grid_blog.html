@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/grid_blog.css">
+        <title>grid blog</title>
+
+        <style>
+            :root {
+                --greyColor: rgba(0, 0, 0, 0.6);
+                --borderBottom: 3px solid #333;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+            h1, h2, h3, h4, h5, h6, body, html, body, p {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: #f4f4f4;
+                padding: 50px;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 100px;
+            }
+            .header .header__title {
+                font-size: 22px;
+            }
+            .header .header__title span,
+            .header .header__subtitle span {
+                display: block;
+            }
+            .header .header__title span {
+                letter-spacing: 6.7px;
+                font-weight: 100;
+                font-size: 16px;
+                margin-top: 3px;
+            }
+            .header .header__subtitle span {
+                font-weight: 100;
+                font-size: 50px;
+            }
+
+            .header .header__subtitle {
+                font-size: 62px;
+                text-align: right;
+            }
+
+            .content {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-gap: 50px;
+            }
+            .content .content__sidebar {
+                grid-column: span 2;
+            }
+            .content .content__projects {
+                grid-column: span 3;
+            }
+
+            .box {
+                margin-bottom: 50px;
+            }
+            .box .box__title {
+                padding-bottom: 10px;
+                border-bottom: var(--borderBottom);
+                margin-bottom: 25px;
+            }
+            .box .info {
+                font-size: 13px;
+                color: #8e8e8e;
+            }
+            .box .box__categories {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            .box__categories .box__category {
+                color: #bdc3c7;
+                margin-bottom: 10px;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+            .box__categories .box__category:last-child {
+                margin-bottom: 0;
+            }
+            .box__categories .box__category--selected {
+                color: #333;
+            }
+
+            .box .box__text {
+                line-height: 1.5;
+            }
+
+            .content__projects .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 20px;
+            }
+
+            .project {
+                border-bottom: var(--borderBottom);
+                padding-bottom: 20px;
+            }
+
+            .project .project__image {
+                width: 100%;
+                height: 450px;
+                margin-bottom: 15px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            .project:first-child .project__image {
+                background-image: url('https://i.pinimg.com/564x/1d/53/05/1d530541dcd52c8d2ce5b660d402f77c.jpg');
+            }
+            .project:nth-child(2) .project__image {
+                background-image: url('https://i.pinimg.com/564x/27/48/9f/27489f059f9bbf266b4e8aa4cb6061bb.jpg');
+            }
+            .project:last-child .project__image {
+                background-image: url('https://i.pinimg.com/564x/1c/90/4a/1c904acc28a32a261a976cd5ebd15bfa.jpg');
+            }
+
+
+            .project ..project__title {
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            .project .project__author {
+                color: var(--greyColor);
+                font-weight: 500;
+                margin-bottom: 15px;
+                margin-top: 5px;
+            }
+            .project .project__date, .project .project__location {
+                color: var(--greyColor);
+                display: block;
+            }
+            .project .project__date {
+                font-weight: 300;
+            }
+            .project .project__location {
+                margin-bottom: 30px;
+            }
+            .project .project__intro {
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__title">
+                Urban _____
+                <span>LifeStyle</span>
+            </h1>
+            <h2 class="header__subtitle">
+                Modern
+                <span>Life</span>
+            </h2>
+        </header>
+
+        <main class="content">
+            <aside class="content__sidebar">
+                <div class="box">
+                    <h3 class="box__title">About</h3>
+                    <p class="box__text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam reprehenderit assumenda quibusdam quo sit,
+                        modi, sequi, consectetur quaerat eveniet mollitia asperiores omnis inventore saepe! Corrupti laboriosam nisi
+                        dolores! In, vel.
+                    </p>
+                </div>
+                <div class="box">
+                    <h3 class="box__title">Categories</h3>
+                    <ul class="box__categories">
+                        <li class="box__category box__category--selected">All</li>
+                        <li class="box__category">Diploma</li>
+                        <li class="box__category">Design Studio</li>
+                        <li class="box__category">Elective Course</li>
+                        <li class="box__category">Malakies</li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <h3 class="contact box__title">contact</h3>
+                    <p class="info">
+                        www.lookingforthejob.com ㅣ 1982gaya@gmail.com
+                    </p>
+                </div>
+            </aside>
+            <section class="content__projects">
+                <div class="box">
+                    <h3 class="box__title">Projects</h3>
+                    <div class="grid">
+                        <article class="project">
+                            <div class="project__image"></div>
+                            <h4 class="project__title">[#1]- Dream House for Family</h4>
+                            <h5 class="project__author">John Lennon</h5>
+                            <small class="project__date">Jan 15</small>
+                            <span class="project__location">Zurich</span>
+                            <p class="project__intro">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque quisquam. 
+                            </p>
+                            <span class="project__plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/>
+                                </svg>
+                            </span>
+                        </article>
+
+                        <article class="project">
+                            <div class="project__image"></div>
+                            <h4 class="project__title">[#2]- what Dining room good for Family?</h4>
+                            <h5 class="project__author">Angelina Jolie</h5>
+                            <small class="project__date">Feb 3</small>
+                            <span class="project__location">New York</span>
+                            <p class="project__intro">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque quisquam.
+                            </p>
+                            <span class="project__plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/>
+                                </svg>
+                            </span>
+                        </article>
+
+                        <article class="project">
+                            <div class="project__image"></div>
+                            <h4 class="project__title">[#3]- Library for Father</h4>
+                            <h5 class="project__author">Johnny Depp</h5>
+                            <small class="project__date">Mar 11</small>
+                            <span class="project__location">Monica Beach</span>
+                            <p class="project__intro">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque quisquam.
+                            </p>
+                            <span class="project__plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/>
+                                </svg>
+                            </span>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
