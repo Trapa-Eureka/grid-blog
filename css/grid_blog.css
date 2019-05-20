@@ -146,3 +146,14 @@ body {
     line-height: 1.5;
     margin-bottom: 15px;
 }
+@media screen and (max-width: 960px) {
+    .content__projects .grid {
+        grid-template-columns: 1fr;
+    }
+    .project .project__image {
+        height: 200px;
+    }
+    .project .project__intro {
+        word-break: break-all;
+    }
+}
